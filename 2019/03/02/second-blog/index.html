@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Archives: 2019 | Hexo</title>
+  <title>second-blog | Hexo</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -59,7 +59,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -167,87 +167,102 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 </div>
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p>每一个不曾起舞的日子都是对生命的辜负。</p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-
-
-
-
-<section id="services">
+      
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2019/03/02/second-blog/">second-blog</a></h4>
-                            
-                            <p><time datetime="2019-03-02T13:28:53.000Z"><a href="/2019/03/02/second-blog/">2019-03-02</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2019/03/02/my-first-blog/">my-first-blog</a></h4>
-                            
-                            <p><time datetime="2019-03-02T13:17:59.000Z"><a href="/2019/03/02/my-first-blog/">2019-03-02</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2019/03/02/hello-world/">Hello World</a></h4>
-                            
-                            <p><time datetime="2019-03-02T10:14:01.051Z"><a href="/2019/03/02/hello-world/">2019-03-02</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2019-03-02T13:28:53.000Z" itemprop="datePublished">
+          2019-03-02
+      </time>
+    
+</span>
+                <h1>second-blog</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<h1 id="Kafka集群搭建"><a href="#Kafka集群搭建" class="headerlink" title="Kafka集群搭建"></a>Kafka集群搭建</h1><h2 id="部署之前先搭建好zookeeper集群（参考zookeeper资料）"><a href="#部署之前先搭建好zookeeper集群（参考zookeeper资料）" class="headerlink" title="部署之前先搭建好zookeeper集群（参考zookeeper资料）"></a>部署之前先搭建好zookeeper集群（参考zookeeper资料）</h2><h2 id="部署环境要求安装包：zookeeper-3-4-5、jdk1-7、kafka-2-11-0-10-1-1"><a href="#部署环境要求安装包：zookeeper-3-4-5、jdk1-7、kafka-2-11-0-10-1-1" class="headerlink" title="部署环境要求安装包：zookeeper-3.4.5、jdk1.7、kafka_2.11-0.10.1.1"></a>部署环境要求安装包：zookeeper-3.4.5、jdk1.7、kafka_2.11-0.10.1.1</h2><a id="more"></a>
+<h1 id="zookeeper部署步骤"><a href="#zookeeper部署步骤" class="headerlink" title="zookeeper部署步骤"></a>zookeeper部署步骤</h1><h1 id="将需要的安装包放到各服务器-opt目录下并解压"><a href="#将需要的安装包放到各服务器-opt目录下并解压" class="headerlink" title="将需要的安装包放到各服务器/opt目录下并解压"></a>将需要的安装包放到各服务器/opt目录下并解压</h1><p>tar -xzvf kafka_2.11-0.10.1.1.tgz</p>
+<h1 id="修改-kafka-2-11-0-10-1-1-conf-server-properties文件"><a href="#修改-kafka-2-11-0-10-1-1-conf-server-properties文件" class="headerlink" title="修改../kafka_2.11-0.10.1.1/conf/server.properties文件"></a>修改../kafka_2.11-0.10.1.1/conf/server.properties文件</h1><p>vi ../kafka_2.11-0.10.1.1/conf/server.properties</p>
+<p>broker.id=2  #每台kafka的id不能重复<br>host.name=10.136.15.10  #每台kafka的ip地址<br>zookeeper.connect=10.136.15.10:12181,10.136.15.11:12181,10.136.15.12:12181  #多个zookeeper时使用“,”号隔开</p>
+<h1 id="zookeeper连接信息"><a href="#zookeeper连接信息" class="headerlink" title="zookeeper连接信息"></a>zookeeper连接信息</h1><p>message.max.byte=5242880<br>default.replication.factor=2<br>replica.fetch.max.bytes=5242880</p>
+<h1 id="修改完后保存"><a href="#修改完后保存" class="headerlink" title="修改完后保存"></a>修改完后保存</h1><p>:wq</p>
+<h1 id="部署完成后首先启动各台服务器上的zookeeper-再启动kafka"><a href="#部署完成后首先启动各台服务器上的zookeeper-再启动kafka" class="headerlink" title="部署完成后首先启动各台服务器上的zookeeper,再启动kafka"></a>部署完成后首先启动各台服务器上的zookeeper,再启动kafka</h1><p>./zkServer.sh start<br>./zkServer.sh status</p>
+<h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><h2 id="启动-kafka-（带-amp-表示后台执行）"><a href="#启动-kafka-（带-amp-表示后台执行）" class="headerlink" title="启动 kafka （带 &amp; 表示后台执行）"></a>启动 kafka （带 &amp; 表示后台执行）</h2><p>bin/kafka-server-start.sh config/server.properties &amp;<br>bin/kafka-server-start.sh -daemon config/server.properties</p>
+<h2 id="创建topic（创建一个名为test的topic，只有一个副本，一个分区）"><a href="#创建topic（创建一个名为test的topic，只有一个副本，一个分区）" class="headerlink" title="创建topic（创建一个名为test的topic，只有一个副本，一个分区）"></a>创建topic（创建一个名为test的topic，只有一个副本，一个分区）</h2><p>bin/kafka-topics.sh –create –zookeeper ip:2181 –replication-factor 1 –partitions 1 –topic test</p>
+<h2 id="查看创建的topic"><a href="#查看创建的topic" class="headerlink" title="查看创建的topic"></a>查看创建的topic</h2><p>bin/kafka-topics.sh -list -zookeeper ip:2181</p>
+<h2 id="启动producer"><a href="#启动producer" class="headerlink" title="启动producer"></a>启动producer</h2><p>bin/kafka-console-producer.sh –broker-list ip:9092 –topic test</p>
+<h2 id="启动consumer"><a href="#启动consumer" class="headerlink" title="启动consumer"></a>启动consumer</h2><p>bin/kafka-console-consumer.sh –zookeeper ip:2181 –topic test –from-beginning</p>
+<h2 id="查看日志"><a href="#查看日志" class="headerlink" title="查看日志"></a>查看日志</h2><p>/kafka/logs/server.log</p>
+<p>问题总结：</p>
+<h1 id="启动kafka时报拒绝连接信息"><a href="#启动kafka时报拒绝连接信息" class="headerlink" title="启动kafka时报拒绝连接信息"></a>启动kafka时报拒绝连接信息</h1><h2 id="检查zookeeper是否成功启动，查看zookeeper状态，确保zookeeper成功启动"><a href="#检查zookeeper是否成功启动，查看zookeeper状态，确保zookeeper成功启动" class="headerlink" title="检查zookeeper是否成功启动，查看zookeeper状态，确保zookeeper成功启动"></a>检查zookeeper是否成功启动，查看zookeeper状态，确保zookeeper成功启动</h2><h2 id="检查kafka下的-conf-文件夹里的zookeeper-config文件里的端口设置是否和单独安装的zookeeper配置文件一致"><a href="#检查kafka下的-conf-文件夹里的zookeeper-config文件里的端口设置是否和单独安装的zookeeper配置文件一致" class="headerlink" title="检查kafka下的../conf/文件夹里的zookeeper.config文件里的端口设置是否和单独安装的zookeeper配置文件一致"></a>检查kafka下的../conf/文件夹里的zookeeper.config文件里的端口设置是否和单独安装的zookeeper配置文件一致</h2>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    
+    <a class="pull-right" href="/2019/03/02/my-first-blog/">
+        my-first-blog →
+    </a>
+    
+</nav>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>虽然还没想好写点什么，但是总觉得这里放句话比较和谐。</p>
-        </div>
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 
