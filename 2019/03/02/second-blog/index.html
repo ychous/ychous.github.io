@@ -1,188 +1,85 @@
 <!DOCTYPE html>
-<!--[if lte IE 8 ]>
-<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
-<![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
-<!--
-***************  *      *     *
-      8          *    *       *
-      8          *  *         *
-      8          **           *
-      8          *  *         *
-      8          *    *       *
-      8          *      *     *
-      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
--->
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
-<!--<![endif]-->
-
-<head>
-  <title>second-blog | Hexo</title>
-  <!-- Meta data -->
-    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="generator" content="Hexo">
-    <meta name="author" content="John Doe">
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-
-    <!-- Favicon, (keep icon in root folder) -->
-    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
-
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
-    
-    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
-    
-
-    <!--[if IE 8]>
-    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
-    <![endif]-->
-
-    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
-    <script src="/js/jquery-1.11.1.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
-
-    <!-- Load these in the <head> for quicker IE8+ load times -->
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="/js/html5shiv.min.js"></script>
-    <script src="/js/respond.min.js"></script>
-    <![endif]-->
-
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>second-blog | Ychous</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Kafka集群搭建部署之前先搭建好zookeeper集群（参考zookeeper资料）部署环境要求安装包：zookeeper-3.4.5、jdk1.7、kafka_2.11-0.10.1.1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="second-blog">
+<meta property="og:url" content="http://youchous.github.io/2019/03/02/second-blog/index.html">
+<meta property="og:site_name" content="Ychous">
+<meta property="og:description" content="Kafka集群搭建部署之前先搭建好zookeeper集群（参考zookeeper资料）部署环境要求安装包：zookeeper-3.4.5、jdk1.7、kafka_2.11-0.10.1.1">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-03-02T13:31:39.124Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="second-blog">
+<meta name="twitter:description" content="Kafka集群搭建部署之前先搭建好zookeeper集群（参考zookeeper资料）部署环境要求安装包：zookeeper-3.4.5、jdk1.7、kafka_2.11-0.10.1.1">
   
   
+    <link rel="icon" href="/favicon.ico">
   
-
-  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+  <link rel="stylesheet" href="/css/typing.css">
+  <link rel="stylesheet" href="/css/donate.css">
+  
 </head>
-
-<!--
-<body class="post-template">
--->
-<body id="index" class="lightnav animsition">
-
-      <!-- ============================ Off-canvas navigation =========================== -->
-
-    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
-        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
-            <img src="/img/close.png" alt="Close">
-        </div>
-        <!-- Lists in Slidebars -->
-        <ul class="sb-menu">
-            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
-            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
-            <!-- Dropdown Menu -->
-			 
-            <li>
-                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
-                <ul class="sb-submenu">
-                    
-                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
-                    
-                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
-                    
-                </ul>
-            </li>
-            
-            
-            
-            <li>
-                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
-                <ul class="sb-submenu">
-                    
-                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
-                    
-                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
-                    
-                </ul>
-            </li>
-            
-        </ul>
-        <!-- Lists in Slidebars -->
-        <ul class="sb-menu secondary">
-            
-            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
-            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
-        </ul>
-    </div>
+</html>
+  
     
-    <!-- ============================ END Off-canvas navigation =========================== -->
+      <body>
+    
+  
+      <div id="container" class="container">
+        <article id="post-second-blog" class="article article-type-post" itemscope itemprop="blogPost">
+  <header id="header" class="header">
+  <nav class="mobile-nav">
+    <h1 class="nickname">Ychous</h1>
+    <ul class="mobile-nav-menu">
+      <label for="mobile-menu-toggle"><a>&#9776; Menu</a></label>
+      <input type="checkbox" id="mobile-menu-toggle">
+      <ul class="mobile-nav-link">
+        
+        <a href="/">Home</a>
+        
+        <a href="/archives">Archives</a>
+        
+        <a href="/about">About</a>
+        
+      </ul>
+    </ul>
+  </nav>
+	
+		<nav id="main-nav" class="main-nav nav-left">
+	
+	
+	  <a class="main-nav-link" href="/">Home</a>
+	
+	  <a class="main-nav-link" href="/archives">Archives</a>
+	
+	  <a class="main-nav-link" href="/about">About</a>
+	
+  </nav>
+</header>
 
-    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+  <hr>
+  <div class="article-inner">
+    
 
-    <div id="sb-site">
-        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      second-blog
+    </h1>
+  
 
-        <!-- ============================ Header & Logo bar =========================== -->
-
-        <div id="navigation" class="navbar navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container">
-                    <!-- Nav logo -->
-                    <div class="logo">
-                        <a href="/" title="Logo" class="animsition-link">
-                         <img src="/img/logo.png" alt="Logo" width="35px;"> 
-                        </a>
-                    </div>
-                    <!-- // Nav logo -->
-                    <!-- Info-bar -->
-                    <nav>
-                        <ul class="nav">
-                            <li><a href="/" class="animsition-link">Hexo</a></li>
-                            <li class="nolink"><span>Always </span>Creative.</li>
-                            
-                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
-                            
-                            
-                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
-                            
-                            
-                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
-                            
-                            
-                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
-                            
-                            
-                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
-                            
-                            <li class="nolink"><span>Welcome!</span></li>
-                        </ul>
-                    </nav>
-                    <!--// Info-bar -->
-                </div>
-                <!-- // .container -->
-                <div class="learnmore sb-toggle-right">More</div>
-                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar before"></span>
-                <span class="icon-bar main"></span>
-                <span class="icon-bar after"></span>
-                </button>
-            </div>
-            <!-- // .navbar-inner -->
-        </div>
-
-        <!-- ============================ Header & Logo bar =========================== -->
-
-</div>
+      </header>
+    
+    <div class="article-entry typo" itemprop="articleBody">
       
-<section id="intro">
-    <div class="container">
-        <div class="row col-md-offset-2">
-            <div class="col-md-8">
-    			<span class="post-meta">
-      <time datetime="2019-03-02T13:28:53.000Z" itemprop="datePublished">
-          2019-03-02
-      </time>
-    
-</span>
-                <h1>second-blog</h1>
-            </div>
-        </div>
-        <div class="col-md-8 col-md-offset-2">
-      		<h1 id="Kafka集群搭建"><a href="#Kafka集群搭建" class="headerlink" title="Kafka集群搭建"></a>Kafka集群搭建</h1><h2 id="部署之前先搭建好zookeeper集群（参考zookeeper资料）"><a href="#部署之前先搭建好zookeeper集群（参考zookeeper资料）" class="headerlink" title="部署之前先搭建好zookeeper集群（参考zookeeper资料）"></a>部署之前先搭建好zookeeper集群（参考zookeeper资料）</h2><h2 id="部署环境要求安装包：zookeeper-3-4-5、jdk1-7、kafka-2-11-0-10-1-1"><a href="#部署环境要求安装包：zookeeper-3-4-5、jdk1-7、kafka-2-11-0-10-1-1" class="headerlink" title="部署环境要求安装包：zookeeper-3.4.5、jdk1.7、kafka_2.11-0.10.1.1"></a>部署环境要求安装包：zookeeper-3.4.5、jdk1.7、kafka_2.11-0.10.1.1</h2><a id="more"></a>
+        <h1 id="Kafka集群搭建"><a href="#Kafka集群搭建" class="headerlink" title="Kafka集群搭建"></a>Kafka集群搭建</h1><h2 id="部署之前先搭建好zookeeper集群（参考zookeeper资料）"><a href="#部署之前先搭建好zookeeper集群（参考zookeeper资料）" class="headerlink" title="部署之前先搭建好zookeeper集群（参考zookeeper资料）"></a>部署之前先搭建好zookeeper集群（参考zookeeper资料）</h2><h2 id="部署环境要求安装包：zookeeper-3-4-5、jdk1-7、kafka-2-11-0-10-1-1"><a href="#部署环境要求安装包：zookeeper-3-4-5、jdk1-7、kafka-2-11-0-10-1-1" class="headerlink" title="部署环境要求安装包：zookeeper-3.4.5、jdk1.7、kafka_2.11-0.10.1.1"></a>部署环境要求安装包：zookeeper-3.4.5、jdk1.7、kafka_2.11-0.10.1.1</h2><a id="more"></a>
 <h1 id="zookeeper部署步骤"><a href="#zookeeper部署步骤" class="headerlink" title="zookeeper部署步骤"></a>zookeeper部署步骤</h1><h1 id="将需要的安装包放到各服务器-opt目录下并解压"><a href="#将需要的安装包放到各服务器-opt目录下并解压" class="headerlink" title="将需要的安装包放到各服务器/opt目录下并解压"></a>将需要的安装包放到各服务器/opt目录下并解压</h1><p>tar -xzvf kafka_2.11-0.10.1.1.tgz</p>
 <h1 id="修改-kafka-2-11-0-10-1-1-conf-server-properties文件"><a href="#修改-kafka-2-11-0-10-1-1-conf-server-properties文件" class="headerlink" title="修改../kafka_2.11-0.10.1.1/conf/server.properties文件"></a>修改../kafka_2.11-0.10.1.1/conf/server.properties文件</h1><p>vi ../kafka_2.11-0.10.1.1/conf/server.properties</p>
 <p>broker.id=2  #每台kafka的id不能重复<br>host.name=10.136.15.10  #每台kafka的ip地址<br>zookeeper.connect=10.136.15.10:12181,10.136.15.11:12181,10.136.15.12:12181  #多个zookeeper时使用“,”号隔开</p>
@@ -197,147 +94,88 @@
 <h2 id="查看日志"><a href="#查看日志" class="headerlink" title="查看日志"></a>查看日志</h2><p>/kafka/logs/server.log</p>
 <p>问题总结：</p>
 <h1 id="启动kafka时报拒绝连接信息"><a href="#启动kafka时报拒绝连接信息" class="headerlink" title="启动kafka时报拒绝连接信息"></a>启动kafka时报拒绝连接信息</h1><h2 id="检查zookeeper是否成功启动，查看zookeeper状态，确保zookeeper成功启动"><a href="#检查zookeeper是否成功启动，查看zookeeper状态，确保zookeeper成功启动" class="headerlink" title="检查zookeeper是否成功启动，查看zookeeper状态，确保zookeeper成功启动"></a>检查zookeeper是否成功启动，查看zookeeper状态，确保zookeeper成功启动</h2><h2 id="检查kafka下的-conf-文件夹里的zookeeper-config文件里的端口设置是否和单独安装的zookeeper配置文件一致"><a href="#检查kafka下的-conf-文件夹里的zookeeper-config文件里的端口设置是否和单独安装的zookeeper配置文件一致" class="headerlink" title="检查kafka下的../conf/文件夹里的zookeeper.config文件里的端口设置是否和单独安装的zookeeper配置文件一致"></a>检查kafka下的../conf/文件夹里的zookeeper.config文件里的端口设置是否和单独安装的zookeeper配置文件一致</h2>
-            <div class="clearfix"></div>
-            <hr class="nogutter">
-        </div>
-        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+      
+      
+    </div>
+    <footer class="article-footer">
+      <ul class="article-meta">
+        <li>
+          <span class="label">Published Date:</span>
+          <a href="/2019/03/02/second-blog/" class="article-date">
+  <time datetime="2019-03-02T13:28:53.000Z" itemprop="datePublished">2019-03-02</time>
+</a>
+
+        </li>
+        
+        
+        <hr>
+      </ul>
+    </footer>
+  </div>
+  
     
-    
-    <a class="pull-right" href="/2019/03/02/my-first-blog/">
-        my-first-blog →
+<nav id="article-nav" class="article-nav">
+  
+    <span id="article-nav-newer" class="article-nav-link-wrap newer"></span>
+  
+  
+    <a href="/2019/03/02/my-first-blog/" id="article-nav-older" class="article-nav-link-wrap older">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">my-first-blog</div>
     </a>
-    
+  
 </nav>
 
-        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
-  /**
-   * 搜狐畅言
-   */
 
-  /*
-  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+  
+</article>
 
-  window.onload = function () {
-    (function () {
-      var appid = 'cytXXXX';
-      var conf = 'prod_xxxxxxxxxxxxxxxxx';
-      var width = window.innerWidth || document.documentElement.clientWidth;
-      var loadJs = function (d, a, id) {
-        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
-        var b = document.createElement("script");
-        b.setAttribute("type", "text/javascript");
-        b.setAttribute("charset", "UTF-8");
-        b.setAttribute("src", d);
-        if (id) {
-          b.setAttribute("id", id);
-        }
-        if (typeof a === "function") {
-          if (window.attachEvent) {
-            b.onreadystatechange = function () {
-              var e = b.readyState;
-              if (e === "loaded" || e === "complete") {
-                b.onreadystatechange = null;
-                a()
-              }
-            }
-          } else {
-            b.onload = a
-          }
-        }
-        c.appendChild(b)
-      };
 
-      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
-        window.changyan.api.config({
-          appid: appid,
-          conf: conf
-        })
-      });
-    })();
-  }
-  */
 
-</script>
-</div>
+
+
+
+
+
+
+
+      </div>
+      
+    <footer id="footer" class="post-footer footer">
+      
+      <hr>
+      <div id="footerContent" class="footer-content">
+        <p>This’s Ychous</p>
+
+
+      </div>
+    </footer>
+
+      
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+
+
+<script src="/js/typing.js"></script>
+<!--[if lt IE 9]><script src="https://cdn.jsdelivr.net/npm/html5shiv@3/dist/html5shiv.min.js"></script><![endif]-->
+
+
+
+
+
+
+
     </div>
-</section>
-
-
-      
-<!-- ============================ Footer =========================== -->
-
-<footer>
-    <div class="container">
-            <div class="copy">
-                <p>
-                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By John Doe. All Rights Reserved.
-                </p>
-                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
-            </div>
-            <div class="social">
-                <ul>
-                    
-                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
-                    
-                    
-                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
-                    
-                    
-                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
-                    
-                    
-                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
-                    
-                    
-                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
-                    
-                </ul>
-            </div>
-            <div class="clearfix"> </div>
-        </div>
-</footer>
-
-<!-- ============================ END Footer =========================== -->
-      <!-- Load our scripts -->
-<!-- Resizable 'on-demand' full-height hero -->
-<script type="text/javascript">
-    var resizeHero = function () {
-        var hero = $(".cover,.heightblock"),
-            window1 = $(window);
-        hero.css({
-            "height": window1.height()
-        });
-    };
-
-    resizeHero();
-
-    $(window).resize(function () {
-        resizeHero();
-    });
-</script>
-<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
-<script src="/js/scripts.js"></script><!-- Theme scripts -->
-
-
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-$('#intro').find('img').each(function(){
-  var alt = this.alt;
-
-  if (alt){
-    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
-  }
-
-  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
-});
-(function($){
-  $('.fancybox').fancybox();
-})(jQuery);
-</script>
-
-
-
-      
-</body>
+  </body>
 </html>
