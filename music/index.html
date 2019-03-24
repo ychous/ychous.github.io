@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>音乐播放器</title>
+	<style type="text/css">
+		* {margin: 0; padding: 0; font-family: "仿宋";}
+		#Music {width: 250px; height: 600px; margin: 30px auto; border: 1px solid rgba(0,0,0,0.7);}
+
+		#MusicR {width: 250px; height: 526px; float: left; background: rgba(0,0,0,0.7);}
+		#MusicR ul {list-style: none; width: 140px; height: 180px; margin: 20px auto; text-align: center;}
+		#MusicR ul li:nth-child(2) {text-align: center; line-height: 40px; border-bottom: 1px solid #fff;}
+		#MusicR ul li img {border-radius: 50%; box-shadow: 0px 0px 5px #fff;}
+		.myLrc {width: 100%; height: 290px; text-align: center; color: rgba(0,0,0,0.5); line-height: 30px; font-weight: 600; overflow: auto;}
+		/*滚动条*/
+		.myLrc::-webkit-scrollbar{width: 1px;background: rgba(0,0,0,0.7);}
+		.myLrc::-webkit-scrollbar-button{background-color: rgba(0,0,0,0.7);}
+		.myLrc::-webkit-scrollbar-thumb{background: #999;}		
+		.color{color: #fff; font-size: 18px; font-weight: 700;}
+
+		#MusicScroll {width: 100%; height: 2px; float: left; background: rgba(0,0,0,0.5)}
+		#MusicF {width: 100%; height: 72px; float: left; text-align: center; line-height: 72px; background: rgba(0,0,0,0.75);}
+		#MusicF img{height: 40px; vertical-align: middle;}
+
+		.rotateZ{animation: run 10s linear infinite;}
+		/*定义一个关键帧*/
+		@keyframes run {
+			from{transform: rotate(0deg);}
+			to{transform: rotate(360deg);}
+		}
+
+	</style>
+</head>
+<body>
+	<div id="Music">
+		<textarea id="lrc" style="display: none;">
+			[00:01.59]不再犹豫 
+			[00:03.91]作词：小美 作曲：黄家驹 
+			[00:06.46]演唱：Beyond 
+			[00:08.55] 
+			[00:29.48]无聊望见了犹豫 
+			[00:32.87]达到理想不太易 
+			[00:36.44]即使有信心 
+			[00:38.58]斗志却抑止 
+			[00:43.61]谁人定我去或留 
+			[00:47.31]定我心中的宇宙 
+			[00:50.83]只想靠两手向理想挥手 
+			[00:58.15]问句天几高心中志比天更高 
+			[01:05.11]自信打不死的心态活到老 
+			[01:11.90]OH… 我有我心底故事 
+			[01:19.41]亲手写上每段 
+			[01:21.57]得失乐与悲与梦儿 
+			[01:26.18]OH… 纵有创伤不退避 
+			[01:33.77]梦想有日达成 
+			[01:35.90]找到心底梦想的世界 
+			[01:40.01]终可见 
+			[02:09.64]谁人没试过犹豫 
+			[02:13.28]达到理想不太易 
+			[02:16.85]即使有信心 
+			[02:18.91]斗志却抑止 
+			[02:23.96]谁人定我去或留 
+			[02:27.68]定我心中的宇宙 
+			[02:31.28]只想靠两手向理想挥手 
+			[02:38.41]问句天几高 
+			[02:40.06]心中志比天更高 
+			[02:45.57]自信打不死的心态活到老 
+			[02:52.34]OH… 我有我心底故事 
+			[02:59.91]亲手写上每段 
+			[03:02.05]得失乐与悲与梦儿 
+			[03:06.66]OH… 纵有创伤不退避 
+			[03:14.07]梦想有日达成 
+			[03:16.35]找到心底梦想的世界 
+			[03:20.45]终可见 
+			[03:25.06]OH… 亲手写上每段 
+			[03:30.64]得失乐与悲与梦儿 
+			[03:39.07]OH… 梦想有日达成 
+			[03:45.05]找到心底梦想的世界 
+			[03:49.60]终可见 
+		</textarea>
+		
+		<div id="MusicR">
+			<ul>
+				<li><img class="singer_img" src="./images/music.jpg" width="140px" alt="歌手图片"></li>
+				<li>歌曲名</li>
+			</ul>
+			<div class="myLrc"></div>
+		</div>
+
+		<div id="MusicScroll"></div>
+		<div id="MusicF">
+			<img id="last" src="images/last.png">
+			<img id="play" src="images/play.png">
+			<img id="next" src="images/next.png">
+			<img id="stop" src="images/stop.png">
+		</div>
+
+	</div>
+	<audio src="./song/1.mp3" id="myMusic"></audio>
+
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script>
+		//当页面加载完成后执行这个方法
+		var msArray = new Array();
+		$(document).ready(function(){
+			//解析歌词
+			var lrc = $('#lrc').val();
+			// console.info(lrc);
+			var lrcArr = lrc.split("[");
+			// console.info(lrcArr);
+			var html = '';
+			
+			for (var i = 0; i < lrcArr.length; i++) {
+				var arr = lrcArr[i].split("]");
+				// console.info(arr);
+				var timer = arr[0].split(".");
+				var stimer = timer[0].split(":");
+				// console.info(stimer);
+				var ms = stimer[0]*60 + stimer[1]*1;
+				// console.info(ms);
+
+				//将歌词的时间点存入数组对象
+				msArray.push(ms);
+
+				var message = arr[1];
+				if (message) {
+					html +="<p id='"+ms+"'>"+message+"</p>";
+				}
+
+				$('.myLrc').html(html);
+			}
+
+			//点击按钮播放音乐 方法
+			var musicMark = 0;
+			$("#play").click(function(){
+				if (musicMark == 0) {
+					$("#myMusic").get(0).play();
+					$(".singer_img").addClass("rotateZ");
+					$("#play").attr("src","images/pause.png");
+					musicMark = 1;
+				}else{
+					$("#myMusic").get(0).pause();
+					$(".singer_img").removeClass("rotateZ");
+					$("#play").attr("src","images/play.png");
+					musicMark = 0;
+				}
+			});
+		});	
+
+		/*歌词联动*/
+		var n = 0;//定位当前歌词的行数
+		$("#myMusic").get(0).addEventListener("timeupdate",function(){
+			//获取当前播放时间
+			var timer = this.currentTime;
+			var s = parseInt(timer);
+			// console.info(s);
+			for(var i=0; i<=s; i++){
+				$("#"+i).addClass("color").siblings().removeClass("color");
+				/*$('.myLrc').scrollTop(($('.color').index(this)-10)*25);
+				console.info($('.color').index(this));*/
+			}
+
+			for (var i = n; i <= msArray.length; i++) {
+				if(s == msArray[i]){
+					n = i-1;
+					// console.info(n);
+				}
+				continue;
+			}
+			$(".myLrc").scrollTop((n-5)*25);
+		});
+	</script>
+</body>
+</html>
