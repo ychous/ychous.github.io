@@ -1,6 +1,6 @@
 [
   {
-    "bookSourceName": "笔趣阁1",
+    "bookSourceName": "笔趣阁",
     "bookSourceGroup": "ychous",
     "bookSourceUrl": "https://www.biqugecom.com",
     "loginUrl": "",
@@ -29,6 +29,5 @@
     "ruleContentUrl": "tag.a@href",
     "ruleContentUrlNext": "",
     "ruleBookContent": "id.content@textNodes"
-  },
-  {}
+  }
 ]
