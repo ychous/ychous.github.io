@@ -24,7 +24,7 @@
     "ruleChapterUrl": "",
     "ruleChapterUrlNext": "",
     "ruleIntroduce": "id.intro@textNodes",
-    "ruleChapterList": "-id.list@tag.dd",
+    "ruleChapterList": "id.list@tag.dd",
     "ruleChapterName": "tag.a@text",
     "ruleContentUrl": "tag.a@href",
     "ruleContentUrlNext": "",
